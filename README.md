@@ -7,8 +7,6 @@ Create, Read, Update, Delete (CRUD) operations on blog posts
 
 Post filtering by author or title
 
-Pagination support
-
 Permissions and role-based access (e.g., only authors can edit their posts)
 
 MySQL as a production-ready relational database
@@ -23,4 +21,27 @@ Database: MySQL
 Authentication: Token Authentication (DRF's TokenAuth)
 
 Tools: Postman, Git
+🛠️ API Endpoints
+Method	Endpoint	Description	Auth Required
+POST	/api/register/	Register a new user	❌
+POST	/api/login/	Get auth token	❌
+GET	/api/posts/	List all blog posts	✅
+POST	/api/posts/	Create a new post	✅
+GET	/api/posts/{id}/	Retrieve single post	✅
+PUT	/api/posts/{id}/	Update post (if owner)	✅
+DELETE	/api/posts/{id}/	Delete post (if owner)	✅
+
+📚 Future Improvements
+JWT Authentication using djangorestframework-simplejwt
+
+Comments and tags for posts
+
+Like/Bookmark system
+
+Rate limiting and throttling
+
+Docker + CI/CD integration
+
+
+
 
